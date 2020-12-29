@@ -31,15 +31,10 @@ class Student:
     return f"First Name: {self.first_name.capitalize()}\nLast Name: {self.last_name.capitalize()}\nCourses: {', '.join(map(str.capitalize, self.courses))}"
 
 
-course_1 = ['python','rails','javascript']
-course_2 = ['java','rails','c']
-
-mashrur = Student("mashrur","hossain",course_1)
-john = Student("john","doe",course_2)
-
-
-print(mashrur)
-print(len(mashrur))
-
-print(john)
-print(len(john))
+file_name = "data.txt"
+mashrur = Student("mashrur", "hossain", ["python", "ruby","javascript"])
+print(mashrur.find_in_file(file_name))
+print(mashrur.add_to_file(file_name))
+joe = Student("joe", "schmo", ["python", "ruby", "javascript"])
+print(joe.find_in_file(file_name))
+print(joe.add_to_file(file_name))
