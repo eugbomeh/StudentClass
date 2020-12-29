@@ -23,8 +23,13 @@ class Student:
       print(F"{course} not found.")
 
 
+  def __len__(self):
+    return len(self.courses)
+
+
   def __str__(self):
     return f"First Name: {self.first_name.capitalize()}\nLast Name: {self.last_name.capitalize()}\nCourses: {', '.join(map(str.capitalize, self.courses))}"
+
 
 course_1 = ['python','rails','javascript']
 course_2 = ['java','rails','c']
@@ -34,4 +39,7 @@ john = Student("john","doe",course_2)
 
 
 print(mashrur)
+print(len(mashrur))
+
 print(john)
+print(len(john))
