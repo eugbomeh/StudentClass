@@ -23,6 +23,8 @@ class Student:
       print(F"{course} not found.")
 
 
+  def __str__(self):
+    return f"First Name: {self.first_name.capitalize()}\nLast Name: {self.last_name.capitalize()}\nCourses: {', '.join(map(str.capitalize, self.courses))}"
 
 course_1 = ['python','rails','javascript']
 course_2 = ['java','rails','c']
@@ -31,17 +33,5 @@ mashrur = Student("mashrur","hossain",course_1)
 john = Student("john","doe",course_2)
 
 
-
-print(mashrur.first_name, mashrur.last_name, mashrur.courses )
-print(john.first_name, john.last_name, john.courses )
-
-mashrur.add_course("rails")
-print(mashrur.first_name, mashrur.last_name, mashrur.courses )
-mashrur.add_course("java")
-print(mashrur.first_name, mashrur.last_name, mashrur.courses )
-john.remove_course("c")
-print(john.first_name, john.last_name, john.courses )
-john.remove_course("c")
-print(john.first_name, john.last_name, john.courses )
-john.remove_course("python")
-print(john.first_name, john.last_name, john.courses )
+print(mashrur)
+print(john)
