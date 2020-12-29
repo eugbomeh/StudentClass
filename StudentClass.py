@@ -84,12 +84,15 @@ class Student:
 file_name = "data.txt"
 
 # This are sample records to be added
-mashrur = Student("mashrur", "hossain", ["python", "rubyon","javascript"])
-print(mashrur.add_to_file(file_name))
+# mashrur = Student("mashrur", "hossain", ["python", "rubyon","javascript"])
+# print(mashrur.add_to_file(file_name))
 # joe = Student("joe", "schmo", ["python", "rubyoo", "javascript"])
 # print(joe.add_to_file(file_name))
 
 
-# john,doe:java,c++,c
-# evgeny,rahman:ruby,rails,javascript
-# john,schmoe:python,ruby,javascript
+class StudentAthlete(Student):
+  pass
+
+courses = ["python", "rubyon","javascript"]
+jane = StudentAthlete("jane", "doe",courses)
+print(jane.cour)
